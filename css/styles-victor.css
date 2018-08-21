@@ -1,2 +1,193 @@
-/* Hoja de Estilos CSS utilizada por victor para los primeros diseños
+/*  CSS Document - Final Proyect - Full stack developer course | DigitalHouse  */
 
+/*  Import Fonts  */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600');
+
+/*  Normalize & Other Resets  */
+
+@import url('normalize.css');
+
+
+*{
+	box-sizing: border-box;
+}
+
+
+/*  Bootstap 4
+
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
+
+*/
+
+/* Colores
+#FFAE03 maiz
+#E4572E ladrillo
+#17BEBB turquesa
+#2E282A negro mate
+#76B041 verde agua
+*/
+
+/*  Mobile First - Smaller Displays */
+
+body{
+	font-family: 'Raleway', sans-serif;
+}
+
+nav{
+	background-color: #E4572E;
+	color:white;
+	font-weight: bold;
+}
+
+footer{
+	background-color: #2E282A;
+	color:white;
+	padding: 15px;
+}
+
+
+ul,ol{
+	list-style: none;
+	padding: 0;
+	margin: 0;	
+}
+
+nav li{
+	width: 10%;
+	justify-content: center;
+	text-align: center;
+	padding: 5px 0px 5px 0px;
+	display: inline-block;
+	list-style: none;
+}
+
+a{
+	color:white;
+	display:block;
+}
+
+.container{
+	display:flex;
+	justify-content:space-around;
+}
+
+.social-media{
+	display:flex;
+	justify-content:space-around;
+}
+
+.social-media a{	
+	text-decoration: none;
+	color:#508fb8; 
+}
+
+/*
+
+body{
+	font-family: 'Raleway', sans-serif;
+	background-image: url('../images/bg-body.png');
+}
+
+img{
+	width: 100%;
+	border-radius: 50%;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+	margin: auto;
+}
+
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border: 1px solid #c7c7c7;
+	padding: 20px;
+	margin: 20px;
+}
+
+.card{
+	width: 100%;
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+}
+
+.card-image{
+	display: inline-block;
+	border-radius: 50px;
+}
+
+.social-media{
+	display:flex;
+	justify-content:space-around;
+}
+
+.social-media a{	
+	text-decoration: none;
+	color:#508fb8; 
+}
+
+span{
+	font-size: 3em;
+}
+
+.card-data a{
+	display: inline-block;
+	text-decoration: none;
+	color:white;
+	background-color: #c7c7c7;
+	padding: 15px 25px 15px 25px;
+	font-size: 1em;
+}
+
+.card-data a:hover {
+	background-color: #508fb8;
+}
+
+h2{
+	font-size: 2em;
+}
+
+p{
+	font-size: 1.3em;	
+}
+
+
+/*  Mobile First - Medium Screen
+
+@media(min-width: 640px){  /* from here to bigger screens
+	
+	.card{
+		width:50%;
+	}
+}
+
+/*  Mobile First - Large Screen
+
+@media(min-width: 960px){  /* from here to bigger screens
+	
+	.card{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+
+	.card-image{
+		width: 25%;
+	}
+
+	.card-data{
+		width: 25%;
+		flex-grow: 100%;
+	}
+
+
+	h2{
+		font-size: 1em;
+	}
+
+	p{
+		font-size: 0.8em;	
+	}
+}
