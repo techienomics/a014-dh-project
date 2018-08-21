@@ -5,7 +5,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8">
-		<title> Tournaments | Be The Champion</title>
+		<title> Sign in | Be The Champion</title>
 		<link rel="icon" type="image/png" href="images/favicon-fatality.png">
 		<link rel="stylesheet" 
 			  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -29,7 +29,7 @@
 					<li class="nav-item"><a class="nav-link" data-toggle="pill" href="about.html">About</a> 
 						<!--"nosotros": acerca del sitio y otras preguntas frecuentes-->
 					</li>
-					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="tournaments.html">Fun</a>
+					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="tournaments.html">Fun</a>
 						<!--"torneos/calendario, torneo: home, schedule de juegos, ganadores, puntajes/premios, foro zona de foro sobre games-->
 					    <div class="dropdown-menu">
 					      <a class="dropdown-item" href="tournaments.html">Tournaments</a>
@@ -55,12 +55,59 @@
 
 		<section>
 
-			<h1>Tournaments</h1>
-			<!-- -->
+			<h1>Sign In</h1>
+			<!--registro: recordatorio de los beneficios-->
 			
-			<h2>Calendar</h2>
+			<div id="signin-facebook"><a href="#">Sign in with Facebook</a></div>
+			<div id="signin-googleplus"><a href="#">Sign in with Google Plus</a></div><br>
 			
-			<h2>Last Activity</h2>
+			<form action="" method="post" target="_self">
+				
+				<label for="fullName">Personal Information</label><br>
+				First Name:&nbsp;<input type="text" name="firstName" id="firstName" required><br>
+				Last Name:&nbsp;<input type="text" name="lastName" id="lastName" required><br>
+				User Email:&nbsp;<input type="email" name="userEmail" id="userEmail" required><br><br>
+
+				<label for="fullName">User Information:&nbsp;</label><br>			
+				Choose a Username:&nbsp;<input type="text" name="userName" id="userName" required><br>
+				Set your Password:&nbsp;<input type="text" name="userPassword" id="userPassword" required><br>
+				Repeat your Password:&nbsp;<input type="text" name="repeatUserPassword" id="repeatUserPassword" required><br><br>
+				
+				<label for="userPreferences">General Information</label><br>
+				
+				<label for="userGender">Gender:&nbsp;&nbsp;&nbsp;</label>
+				<label for="userGenderM">Masculino&nbsp;</label>
+					<input type="radio" name="userGender" id="userGenderM" value="M">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<label for="userGenderF">Femenino&nbsp;</label>
+					<input type="radio" name="userGender" id="userGenderF" value="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<label for="userGenderO">Other&nbsp;</label>
+					<input type="radio" name="userGender" id="userGenderO" value="O"><br>
+
+				<label for="userCountry">Country:&nbsp;&nbsp;&nbsp;</label>
+					<select name="">
+						<option value="AR">Argentina</option>
+						<option value="US">United States</option>
+						<option value="CO">Colombia</option>
+						<optgroup label="Others">
+							<option value="BR">Brasil</option>
+							<option value="CH">China</option>
+							<option value="RU">Russia</option>
+							<option value="IN">India</option>
+							<option value="ND">Others not defined</option>
+						</optgroup>
+					</select><br>	
+
+				<label for="userDataSave">Remember me:&nbsp;</label>
+					<input type="radio" name="userDataSave" id="userDataSave" checked><br>
+
+
+				<button type="reset">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<button type="submit">Sign up</button>
+
+			</form>
+			
+			<a href="#">Forgot Password</a><br>
+			<a href="#">Privacy Policy</a>
 
 		<footer>
 
@@ -72,6 +119,7 @@
 						<li class="nav-item"><a class="nav-link" href="#">Cookie Policy</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Forum Rules</a></li>
 							<!--legales: reglas de la comunidad, terminos y condiciones del servicio / politica de privacidad / cookie policy / cookie policy-->
+						<li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
 					</ul>
 				</div>
 

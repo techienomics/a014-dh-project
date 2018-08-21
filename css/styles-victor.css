@@ -40,6 +40,10 @@ nav{
 	font-weight: bold;
 }
 
+aside{
+	width: 40%
+}
+
 footer{
 	background-color: #2E282A;
 	color:white;
