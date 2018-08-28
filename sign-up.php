@@ -1,6 +1,6 @@
 <?php
 	// Head inclusion & Page Title definition
-	$pageTitle = 'Register | Be The Champion';
+	$pageTitle = 'Sign Up | Be The Champion';
 	require_once 'partials/head.php';
 ?>
 
@@ -20,54 +20,55 @@
 ?>
 
 		<main>
-		
-			<section>
 
-				<section>
-					
-					<!-- perfil del usuario -->
 
-					<h1>Register</h1>
-					<!--registro: recordatorio de los beneficios-->
+			<div class="row">
+
+				<div class="col-sm-8">
+
+				<!-- Subscriber form -->
+				<?php $visibleField = !isset($_GET["subscribe"]); ?>
+				<?= ($visibleField) ? "<h1>Register</h1>" : 
+								"<h1>Tournaments Alerts: subscribe </h1>"; ?>
+
+					<h2>Get started:</h2>
+
+					<div class="row">
+						<div class="col-sm-4">
+								<button id="signin-facebook" type="button" class="btn btn-primary btn-sm">
+									<a href="#">Sign up <ion-icon name="logo-facebook"></ion-icon></a>
+								</button>
+						</div>
+						<div class="col-sm-4">
+								<button id="signin-googleplus" type="button" class="btn btn-danger btn-sm">
+									<a href="#">Sign up<ion-icon name="logo-googleplus"></ion-icon></a>
+								</button>
+						</div>
 					
-					<h2>Let's get started</h2>
-					
-				<button id="signin-facebook" type="button" class="btn btn-primary">
-					<a href="#">Sign in with <ion-icon name="logo-facebook"></ion-icon></a>
-				</button>
-				<button id="signin-googleplus" type="button" class="btn btn-danger">
-					<a href="#">Sign in with <ion-icon name="logo-googleplus"></ion-icon></a>
-				</button>
-					
-					
-					<a href="#">Forgot Password</a><br>
+					</div>
+
+					<?php 
+						// Form inclusion
+						require_once 'partials/user-form.php';
+					?>
+
+					<a href="#">Forgot Password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="legals.php#privacy-policy">Privacy Policy</a>
 
+				</div>
 
-					<h2>Sign Up</h2>
-					<!--inicio: recordatorio del calendario-->
+				<div class="col-sm-4">
 
-					
+					<!-- Subscriber form -->
+					<?php $visibleField = !isset($_GET["subscribe"]); ?>
+					<?= ($visibleField) ? "<h3>Benefits to join:</h3>" :
+								"<h3>Benefits to subscribe: </h3>"; ?>
+					<!--registro: recordatorio de los beneficios-->
+				</div>
+			
+			</div>
 
-		<!--
-				</section>
-				
-				<section id="video1">
-						
-					<video id="mi video1" src="/Users/victorpoma/Downloads/prueba_video.m4v" width="320" autoplay controls></video>
-					
-				</section>
-
-				<section id="video2">
-					
-					<video id="mi video2" width="320" controls loop poster="video-player.jpg">
-						<source src="/Users/victorpoma/Downloads/prueba_video.m4v" type="">
-						<source src="/Users/victorpoma/Downloads/prueba_video.ogg" type="">
-						Your browser does not support the video tag.
-					</video>
-					
-				</section>
-		-->
+		</main>
 
 	
 <?php 

@@ -27,11 +27,11 @@
 				
 				<h2>Personal Information</h2>	
 
-				<p>Victor se encuentra trabajando en este < main > </p>
+				<p>Alber/Victor se encuentra trabajando en este < main > </p>
+
 				<br>
-			</section>	
-			
-		<footer>
+
+			</section>
 
 		</main>
 

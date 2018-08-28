@@ -21,38 +21,122 @@
 
 		<main>
 		
-			<section>
+			<section class="row">
 				
-				<h1>ABOUT Be The Champions</h1>
-					<p>Be The Champions is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ipsa nesciunt soluta possimus eius, tempore provident voluptate natus eaque sit cupiditate culpa, incidunt dolores deserunt ad vel! Nulla, eum, debitis!</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptates suscipit, quisquam voluptas mollitia, omnis accusantium qui minus rerum et modi molestias tempore cupiditate sunt labore. Quibusdam, nam, officia! Error.</p>
+				<h1>About us <small>Be The Champions</small></h1>
 				
-			</section>	
+				<article class="col-sm-6">
+						<p>Be The Champions is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ipsa nesciunt soluta possimus eius, tempore provident voluptate natus eaque sit cupiditate culpa, incidunt dolores deserunt ad vel! Nulla, eum, debitis!</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptates suscipit, quisquam voluptas mollitia, omnis accusantium qui minus rerum et modi molestias tempore cupiditate sunt labore. Quibusdam, nam, officia! Error.</p>
+				</article>
+
+				<article class="col-sm-6">
+					<h4 class="" id="">Watch our print</h4>
+						<video id="mi video1"  width="320" autoplay controls loop poster="video-player.jpg">
+							<source src="/Users/victorpoma/Downloads/prueba_video.m4v" type="">
+								Your browser does not support the video tag.
+						</video>
+				</article>
+				
+			</section>
 		
-			<table class="table table-hover">
+			<section class="row">
 
-			    <thead>
-			      <tr><th>
-			      	<h2 class="" id="faq">FAQ | Frequently Asked Questions</h2>
-			      </th></tr>
-			    </thead>
+				<h2 class="col-sm-12" id="faq-list">FAQ | Frequently Asked Questions</h2>
 
-			    <tbody>
-			      <tr><td>
-			      	<h3 id="faq-1-"></h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos nam explicabo distinctio totam eligendi ipsam minima incidunt animi ducimus impedit dolor maiores, quibusdam, perspiciatis id voluptatem odio ratione molestiae.</p>
-			      </td></tr>
-			      <tr><td>
-			      	<h3 id="faq-1-"></h3>
-					<p>Quos sed neque pariatur animi impedit temporibus laudantium blanditiis numquam vero at, assumenda repellendus deserunt, ducimus nulla labore sunt ex vel odio. Dicta, neque nobis ipsum aliquid quisquam quam eveniet?</p>
-			      </td></tr>
-			      <tr><td>
-			      	<h3 id="faq-1-"></h3>
-					<p>A molestiae ea ab magnam modi ut, architecto dolorem, accusantium maiores assumenda tempore officiis, illo! Velit saepe dolor consequatur rerum temporibus, voluptate a ullam aut aperiam, excepturi ea, officiis adipisci?</p>
-			      </td></tr>
-			    </tbody>
+				<div calss="col-sm-12" id="faq">
 
-			  </table>
+				  <div id="faq-1" class="card">
+				    <div class="card-header">
+				      <a class="card-link" data-toggle="collapse" href="#collapse-1">
+				        FAQ #1. Creating an account
+				      </a>
+				    </div>
+				    <div id="collapse-1" class="collapse show" data-parent="#faq">
+				      <div class="card-body">
+				        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos nam explicabo distinctio totam eligendi ipsam minima incidunt animi ducimus impedit dolor maiores, quibusdam, perspiciatis id voluptatem odio ratione molestiae.
+				      </div>
+				    </div>
+				  </div>
 
+				  <div id="faq-2" class="card">
+				    <div class="card-header">
+				      <a class="collapsed card-link" data-toggle="collapse" href="#collapse-2">
+				        FAQ #2. A Tour of Your Profile Page
+				      </a>
+				    </div>
+				    <div id="collapse-2" class="collapse" data-parent="#faq">
+				      <div class="card-body">
+				        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos nam explicabo distinctio totam eligendi ipsam minima incidunt animi ducimus impedit dolor maiores, quibusdam, perspiciatis id voluptatem odio ratione molestiae.
+				      </div>
+				    </div>
+				  </div>
+
+				  <div id="faq-3" class="card">
+				    <div class="card-header">
+				      <a class="collapsed card-link" data-toggle="collapse" href="#collapse-3">
+				        FAQ #3. Joining Tournaments
+				      </a>
+				    </div>
+				    <div id="collapse-3" class="collapse" data-parent="#faq">
+				      <div class="card-body">
+				        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos nam explicabo distinctio totam eligendi ipsam minima incidunt animi ducimus impedit dolor maiores, quibusdam, perspiciatis id voluptatem odio ratione molestiae.
+				      </div>
+				    </div>
+				  </div>
+
+				  <div id="faq-4" class="card">
+				    <div class="card-header">
+				      <a class="collapsed card-link" data-toggle="collapse" href="#collapse-4">
+				        FAQ #4. Chat Functionality
+				      </a>
+				    </div>
+				    <div id="collapse-4" class="collapse" data-parent="#faq">
+				      <div class="card-body">
+				        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos nam explicabo distinctio totam eligendi ipsam minima incidunt animi ducimus impedit dolor maiores, quibusdam, perspiciatis id voluptatem odio ratione molestiae.
+				      </div>
+				    </div>
+				  </div>
+
+				  <div id="faq-5" class="card">
+				    <div class="card-header">
+				      <a class="collapsed card-link" data-toggle="collapse" href="#collapse-5">
+				        FAQ #5. Chat Basics
+				      </a>
+				    </div>
+				    <div id="collapse-5" class="collapse" data-parent="#faq">
+				      <div class="card-body">
+				        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos nam explicabo distinctio totam eligendi ipsam minima incidunt animi ducimus impedit dolor maiores, quibusdam, perspiciatis id voluptatem odio ratione molestiae.
+				      </div>
+				    </div>
+				  </div>
+
+				  <div id="faq-6" class="card">
+				    <div class="card-header">
+				      <a class="collapsed card-link" data-toggle="collapse" href="#collapse-6">
+				        FAQ #6. How to Link Social Accounts
+				      </a>
+				    </div>
+				    <div id="collapse-6" class="collapse" data-parent="#faq">
+				      <div class="card-body">
+				        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos nam explicabo distinctio totam eligendi ipsam minima incidunt animi ducimus impedit dolor maiores, quibusdam, perspiciatis id voluptatem odio ratione molestiae.
+				      </div>
+				    </div>
+				  </div>
+
+				</div>
+
+			</section>
+
+			<section class="row">
+				
+				<article class="col-sm-12">
+					<h3>Any further doubt? <small>Ask Albert:</small></h3>
+						<p>Be The Champions is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ipsa nesciunt soluta possimus eius, tempore provident voluptate natus eaque sit cupiditate culpa, incidunt dolores deserunt ad vel! Nulla, eum, debitis!</p>
+						<p></p>
+				</article>
+
+			</section>
 
 		</main>
 
@@ -64,110 +148,26 @@
 
 
 
-<!--
+<!-- table class="table table-hover">
 
-Getting Started
-Creating an account with Twitch
-Twitch Account Settings
-A Tour of Your Channel Page
-How to Use Clips
+    <thead>
+      <tr><th>
+      	<h2 class="" id="faq">FAQ | Frequently Asked Questions</h2>
+      </th></tr>
+    </thead>
 
-Chat Functionality
-Chat Basics
-Twitch Chat Badges Guide
-Chat Commands
-Guide to Cheering with Bits
-Guide to Custom Messages
+    <tbody>
+      <tr><td>
+      	<h3 id="faq-1-"></h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos nam explicabo distinctio totam eligendi ipsam minima incidunt animi ducimus impedit dolor maiores, quibusdam, perspiciatis id voluptatem odio ratione molestiae.</p>
+      </td></tr>
+      <tr><td>
+      	<h3 id="faq-1-"></h3>
+		<p>Quos sed neque pariatur animi impedit temporibus laudantium blanditiis numquam vero at, assumenda repellendus deserunt, ducimus nulla labore sunt ex vel odio. Dicta, neque nobis ipsum aliquid quisquam quam eveniet?</p>
+      </td></tr>
+      <tr><td>
+      	<h3 id="faq-1-"></h3>
+		<p>A molestiae ea ab magnam modi ut, architecto dolorem, accusantium maiores assumenda tempore officiis, illo! Velit saepe dolor consequatur rerum temporibus, voluptate a ullam aut aperiam, excepturi ea, officiis adipisci?</p>
+      </td></tr>
+    </tbody>
 
-Beginner Broadcasting
-Broadcast Requirements
-How to Broadcast PC Games
-How to Broadcast Console Games
-How to Broadcast Xbox One Games
-How to Broadcast PS4 Games
-VIEW ALL 37 ARTICLES
-Twitch Prime & Turbo
-Twitch Prime Guide
-Twitch Prime Program FAQ
-How to Use Twitch Prime Subscriptions
-Twitch Turbo Guide
-How to Link Your Amazon Account
-Affiliate Program
-Joining the Affiliate Program
-Affiliate Onboarding Guide
-Twitch Affiliate Program FAQ
-Guide to Earning Game Revenue for Affili...
-Subscriber Emoticon Guide for Affiliates
-VIEW ALL 6 ARTICLES	
-Partner Program
-Partner Program Overview
-Tips for Applying to the Partner Program
-Partner Settings Guide
-Subscriber Emoticon Guide for Partners
-Subscriber Badge Guide
-VIEW ALL 21 ARTICLES
-Community & Moderation
-Community Guidelines
-How to Manage Harassment in Chat
-How to File a User Report
-How to File a Whisper Report
-Creative FAQ
-VIEW ALL 24 ARTICLES	
-Purchase Support & Contact Help
-Purchase Support FAQ
-Username Rename and Recycling Policies
-How to Handle View/Follow-Bots
-Twitch Twitter "@TwitchSupport"...
-How to Provide Feedback
-VIEW ALL 20 ARTICLES	
-Troubleshooting
-How to send error information
-How to File a Video Playback Issue
-How to Send in Console Output
-Error Message: Trouble Loading an Ad
-Troubleshooting Xbox One Broadcasting
-VIEW ALL 12 ARTICLES
-Twitch App Set Up
-Installing and Uninstalling the Twitch A...
-Twitch App Fast Login
-Friend Sync 101
-Twitch App's My Games Tab
-Useful Settings in the Twitch App
-VIEW ALL 6 ARTICLES	
-Twitch App Game Assistance
-Addon & Mod Feature Settings
-Game Profiles
-Guide to Focusing on Addons & Mods
-Guide to Modpacks
-How to Play Minecraft with Twitch App
-VIEW ALL 10 ARTICLES	
-Twitch App Troubleshooting
-Basic Troubleshooting Tips
-Deep Virus Scan
-Information Retrieval for Troubleshootin...
-Specific Errors in the Twitch App
-Switching Between Live and Beta
-VIEW ALL 6 ARTICLES
-Mobile & Console Apps
-Watching Twitch on iOS Devices
-Watching Twitch on Android Devices
-Chromecast Support
-How to get and use the PS3 App
-How to get and use the PS4 App
-VIEW ALL 5 ARTICLES	
-Broadcast Setup & Software
-Broadcasting with Two Computers
-How to Use Gameshow Streaming Software
-Overwolf Twitch Streaming Application
-Broadcasting with Evolve
-XSplit Gamecaster
-VIEW ALL 7 ARTICLES	
-Promotion Rules
-Doctor Who Watch to Win Sweepstakes
-PAX East Social Media Giveaway
-Twitch Pax East Scavenger Hunt Rules
-2018 FreshStock Social Media Giveaway Of...
-Twitch NBA G League All-Star Corresponde...
-VIEW ALL 36 ARTICLES
-Still need help with something?
-Send Us an Email
+  </table -->

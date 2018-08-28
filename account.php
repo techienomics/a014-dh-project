@@ -1,6 +1,6 @@
 <?php
 	// Head inclusion & Page Title definition
-	$pageTitle = 'Tournaments | Be The Champion';
+	$pageTitle = 'My Account | Be The Champion';
 	require_once 'partials/head.php';
 ?>
 
@@ -20,21 +20,25 @@
 ?>
 
 		<main>
-		
+			
+			<div class="alert alert-success">
+			<p>Congratulation! Your new account was successfully created.</p>
+			</div>
+			
 			<section>
-
-				<h1>Tournaments</h1>
-				<!-- -->
 				
-				<h2>Calendar</h2>
+				<h1>My Account</h1>
 				
-				<h2>Last Activity</h2>
+				<h2>Personal Information</h2>	
 
-				<h2>Sign Up</h2>
-				<!--inicio: recordatorio del calendario-->
+				<p>Victor se encuentra trabajando en este < main > </p>
+				<br>
+			
+			</section>	
+
+		</main>
 
 
-	
 <?php 
 	// Body-footer inclusion
 	require_once 'partials/body-footer.php';

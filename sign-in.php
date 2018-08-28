@@ -21,27 +21,42 @@
 
 		<main>
 		
-			<section>
+			<h1>Log In</h1>
+			
+			<div class="row">
+				<div class="col-sm-8">
 
-				<h1>Sign In</h1>
-				<!--registro: recordatorio de los beneficios-->
-				
-				<button id="signin-facebook" type="button" class="btn btn-primary">
-					<a href="#">Sign in with <ion-icon name="logo-facebook"></ion-icon></a>
-				</button>
-				<button id="signin-googleplus" type="button" class="btn btn-danger">
-					<a href="#">Sign in with <ion-icon name="logo-googleplus"></ion-icon></a>
-				</button>
-				
-				<?php 
-					// Body-subscriber-form inclusion
-					require_once 'partials/body-subscriber-form.php';
-				?>
-				
-				<a href="#">Forgot Password</a><br>
-				<a href="legals.php#privacy-policy">Privacy Policy</a>
+					<h2>Welcome back!</h2>
 
-			</section>	
+					<div class="row">
+						<div class="col-sm-4">
+								<button id="signin-facebook" type="button" class="btn btn-primary btn-sm">
+									<a href="#">Sign in <ion-icon name="logo-facebook"></ion-icon></a>
+								</button>
+						</div>
+						<div class="col-sm-4">
+								<button id="signin-googleplus" type="button" class="btn btn-danger btn-sm">
+									<a href="#">Sign in<ion-icon name="logo-googleplus"></ion-icon></a>
+								</button>
+						</div>
+					
+					</div>
+
+					<?php 
+						// Form inclusion
+						require_once 'partials/user-form.php';
+					?>
+
+					<a href="#">Forgot Password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="legals.php#privacy-policy">Privacy Policy</a>
+
+				</div>
+
+				<div class="col-sm-4">
+					<h3>Next Events:</h3>
+				</div>
+			
+			</div>
 		
 		</main>
 

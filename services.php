@@ -35,7 +35,7 @@
 			<section id="subscriptions" class="container">
 
 				<article class="col-sm-6">
-					<h2 id="free">Free</h2>
+					<h2 id="free">Free <small><span class="badge badge-info">$9,99/month</span></small></h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex id neque sit ipsum deserunt ipsam ratione inventore adipisci architecto veritatis, doloremque, voluptates, alias culpa laudantium numquam quod natus voluptatum! Perferendis.</p>
 						<p>Maiores vero, praesentium inventore iure? Perspiciatis, dignissimos nesciunt quae reiciendis? Quis eligendi dolorem, commodi, delectus dignissimos mollitia ipsam sequi sint aliquid sunt animi! In excepturi voluptate ipsa sed quam natus.</p>
 						<p>Asperiores ullam inventore rerum esse, rem dicta doloribus quae beatae iure! Minima inventore dolor iure ab est nostrum sequi ipsa sit ad, itaque in autem laborum quia veritatis perspiciatis ullam.</p>
@@ -45,7 +45,7 @@
 				</article>
 				
 				<article class="col-sm-6">
-					<h2 id="premium">Premium</h2>
+					<h2 id="premium">Premium <small><span class="badge badge-info">$19,99/month</span></small></h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex id neque sit ipsum deserunt ipsam ratione inventore adipisci architecto veritatis, doloremque, voluptates, alias culpa laudantium numquam quod natus voluptatum! Perferendis.</p>
 						<p>Maiores vero, praesentium inventore iure? Perspiciatis, dignissimos nesciunt quae reiciendis? Quis eligendi dolorem, commodi, delectus dignissimos mollitia ipsam sequi sint aliquid sunt animi! In excepturi voluptate ipsa sed quam natus.</p>
 						<p>Asperiores ullam inventore rerum esse, rem dicta doloribus quae beatae iure! Minima inventore dolor iure ab est nostrum sequi ipsa sit ad, itaque in autem laborum quia veritatis perspiciatis ullam.</p>
@@ -71,8 +71,6 @@
 			</section>
 
 			</div>
-
-
 		
 		</main>
 

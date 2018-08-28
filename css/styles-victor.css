@@ -38,6 +38,12 @@ body{
 	width: 100%;
 }
 
+#customer-service-chat {
+	position: fixed;
+    bottom: 1px;
+    right: 10px;
+}
+
 /* ------ Body-header ------ */
 
 /*header div img {
