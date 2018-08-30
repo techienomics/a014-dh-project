@@ -1,4 +1,7 @@
-<?php 
+<?php
+
+	require_once 'toolkit.php';
+
 	// Data Form
 	$countries = [
 		"ar" => "Argentina",
@@ -19,8 +22,11 @@
 		"F" => "Female",
 		"O" => "Other",
 	];
+?>
 
-	// Data validation Form
+<?php
+	
+/*  // Data validation Form
 	$userFirstName = "";
 	$userLastName = "";
 	$userEmail = "";
@@ -61,9 +67,11 @@
 			header("location: account.php"); exit;
 		}
 	}
+*/
 ?>
 
-	<form action="account.php" method="post" target="_self">
+
+	<form method="post" target="_self">
 
 		<ul>
 			<?php foreach ($errors as $oneError): ?>
@@ -75,6 +83,10 @@
 
 		<fieldset>
 
+			<!-- Login form -->
+			<?php $visibleField = !isset($_GET["login"]); ?>
+			<?php if ($visibleField): ?>
+			
 			<label>Personal Information</label><br>
 
 			<div class="form-inline">
@@ -95,6 +107,8 @@
 				</span>
 			</div>
 
+			<?php endif; ?>
+			
 			<div class='form-inline'>
 				User Email*:&nbsp;
 				<input type="email" name="userEmail" id="userEmail" 
@@ -104,16 +118,41 @@
 				</span>
 			</div>
 
-		</fieldset>
+			<div class='form-inline'>
+				Password*:&nbsp;
+				<input type="password" name="userPassword" id="userPassword" 
+									value=">" required><br>
+				<span class="alert alert-success">
+					<?= isset($errors["userPassword"]) ? $errors["userPassword"] : '' ?>
+				</span>
+			</div>
 
-
-		<!-- Subscriber form -->
-		<?php $visibleField = !isset($_GET["subscribe"]); ?>
+			<!-- Subscriber & Login form -->
+		<?php (!isset($_GET["subscribe"]) || isset($_GET["login"])) ?
+				 $visibleField = true : $visibleField = false ?>
 		<?php if ($visibleField): ?>
 
+			<div class='form-inline'>
+				Repeat your Password*:&nbsp;
+				<input type="password" name="repeatUserPassword" id="repeatUserPassword" 
+									value="" required><br>
+				<span class="alert alert-success">
+					<?= isset($errors["repeatUserPassword"]) ? $errors["repeatUserPassword"] : '' ?>
+				</span>
+			</div>
+
+		<?php endif; ?>
+
+		</fieldset>
+
+		<!-- Subscriber & Login form -->
+		<?php (!isset($_GET["subscribe"]) || isset($_GET["login"])) ?
+				 $visibleField = true : $visibleField = false ?>
+		<?php if ($visibleField): ?>
+		
 		<fieldset>
 
-			<label>User Information:&nbsp;</label><br>
+			<label">General Information</label><br>
 
 			<div class='form-inline'>
 				Choose a User Name*:&nbsp;
@@ -124,33 +163,10 @@
 				</span>
 			</div>
 
-			<div class='form-inline'>
-				Set your Password*:&nbsp;
-				<input type="password" name="userPassword" id="userPassword" 
-									value=">" required><br>
-				<span class="alert alert-success">
-					<?= isset($errors["userPassword"]) ? $errors["userPassword"] : '' ?>
-				</span>
-			</div>
-				
-			<div class='form-inline'>
-				Repeat your Password*:&nbsp;
-				<input type="password" name="repeatUserPassword" id="repeatUserPassword" 
-									value="" required><br>
-				<span class="alert alert-success">
-					<?= isset($errors["repeatUserPassword"]) ? $errors["repeatUserPassword"] : '' ?>
-				</span>
-			</div>
-
-			</fieldset>
-		
-		<fieldset>
-
-			<label">General Information</label><br>
-
 			<div class='form-group'>
 				<label for="userGender">Gender:&nbsp;&nbsp;&nbsp;</label>
-				<select name="userGender">
+				<select name="userGender"> <!-- revisar luego la persistencia de este campo -->
+					<option value="Choose your gender...">Choose your gender...</option>
 					<?php foreach ($gender as $code => $isgender): ?>
 						<option value="<?php echo $code ?>"> <?php echo $isgender ?>
 						</option>
@@ -163,7 +179,9 @@
 
 			<div class='form-group'>
 				<label for="userCountry">Country:&nbsp;&nbsp;&nbsp;</label>	
-				<select name="userCountry">
+				
+				<select name="userCountry"> <!-- revisar luego la persistencia de este campo -->
+					<option value="Choose your country...">Choose your country...</option>
 					<?php foreach ($countries as $code => $country): ?>
 						<option value="<?php echo $code ?>"> <?php echo $country ?>
 						</option>
@@ -180,17 +198,17 @@
 		
 		<fieldset>
 
-		<!-- Subscriber form -->
-		<?php $visibleField = !isset($_GET["subscribe"]); ?>
-		<?php if ($visibleField): ?>
+			<!-- Subscriber form -->
+			<?php $visibleField = !isset($_GET["subscribe"]); ?>
+			<?php if ($visibleField): ?>
 
 			<div class='form-group'>
-
 
 				<label for="userDataSave">Remember me:&nbsp;</label>
 					<input type="radio" name="userDataSave" id="userDataSave"><br>
 			</div>
-		<?php endif; ?>
+			
+			<?php endif; ?>
 
 			<button class="button btn-sm" type="reset">Clear all</button>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

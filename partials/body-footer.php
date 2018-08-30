@@ -79,7 +79,7 @@
 				</div>
 -->
 			<!--Institutional Print-->
-			<div class="row">
+			<div class="row m-auto">
 				<div class="col-sm-12">
 					<small id='copyright'>
 						Be The Champion<sup>&copy</sup> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; An Albert & Victor Company, 2018 - <?php echo date('Y'); ?>.
@@ -91,6 +91,10 @@
 
 		<!--Ion icons -->
 		<script src="https://unpkg.com/ionicons@4.3.0/dist/ionicons.js"></script>
+		<!-- JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 	</body>
 

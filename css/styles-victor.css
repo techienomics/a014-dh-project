@@ -2,7 +2,7 @@
 
 /* -------- Import Fonts -------- */
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600');
+/* @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600');
 
 /* -------- Normalize -----------
 	@import url('normalize.css');  /* already imported at HTML head 
@@ -36,6 +36,21 @@ ul,ol{
 body{
 	font-family: 'Raleway', sans-serif;
 	width: 100%;
+}
+
+#nav-register a:active, a:link, a:visited, a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+a:active, a:link, a:visited, a:hover #nav-login {
+	color: white;
+	text-decoration: none;
+}
+
+a:active, a:link, a:visited, a:hover #subscribe {
+	color: white;
+	text-decoration: none;
 }
 
 #customer-service-chat {

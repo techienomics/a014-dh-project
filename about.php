@@ -2,19 +2,13 @@
 	// Head inclusion & Page Title definition
 	$pageTitle = 'About | Be The Champion';
 	require_once 'partials/head.php';
-?>
 
-<?php
 	// Body-header inclusion
 	require_once 'partials/body-header.php';
-?>
 
-<?php
 	// Body-nav inclusion
 	require_once 'partials/body-nav.php';
-?>
-		
-<?php 
+
 	// Body-aside inclusion
 	require_once 'partials/body-aside.php';
 ?>
@@ -139,7 +133,6 @@
 			</section>
 
 		</main>
-
 
 <?php 
 	// Body-footer inclusion

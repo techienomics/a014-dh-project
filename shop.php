@@ -1,6 +1,7 @@
 <?php
+	$pageTitle = 'Shop | Be The Champion';
+	
 	// Head inclusion & Page Title definition
-	$pageTitle = 'My Account | Be The Champion';
 	require_once 'partials/head.php';
 
 	// Body-header inclusion
@@ -14,22 +15,15 @@
 ?>
 
 		<main>
-			
-			<div class="alert alert-success">
-			<p>Congratulation! Your new account was successfully created.</p>
-			</div>
-			
+		
 			<section>
 				
-				<h1>My Account</h1>
-				
-				<h2>Personal Information</h2>	
-
-				<p>Victor se encuentra trabajando en este < main > </p>
+				<h1>Shop</h1>
+				<p>Albert / Victor se encuentra trabajando en este < main > </p>
 				<br>
-			
-			</section>	
 
+			</section>	
+		
 		</main>
 
 <?php 

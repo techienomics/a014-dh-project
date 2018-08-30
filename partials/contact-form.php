@@ -2,8 +2,6 @@
 	// Data Form
 ?>
 
-<!-- Si viene en $_GET la posición ['versionCorta'], oculto campos -->
-
 <!--
 	<?php $mostrarCampos = !isset($_GET['versionCorta']); ?>
 	<?php if ($mostrarCampos): ?>

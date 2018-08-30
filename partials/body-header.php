@@ -1,7 +1,7 @@
 <?php 
 	//	Boady-header for inclusion
 ?>
-
+<!--
 	<header>
 
 		<div class="row">
@@ -30,3 +30,4 @@
 		</div>
 
 	</header>
+-->
