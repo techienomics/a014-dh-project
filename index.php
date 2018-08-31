@@ -14,22 +14,115 @@
 ?>
 
 		<main>
-		
-			<section>
-				
-				<h1>HOME</h1>
-				<p>Albert se encuentra trabajando esta esta seccion < main > </p>
-				<br>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex id neque sit ipsum deserunt ipsam ratione inventore adipisci architecto veritatis, doloremque, voluptates, alias culpa laudantium numquam quod natus voluptatum! Perferendis.</p>
-				<p>Maiores vero, praesentium inventore iure? Perspiciatis, dignissimos nesciunt quae reiciendis? Quis eligendi dolorem, commodi, delectus dignissimos mollitia ipsam sequi sint aliquid sunt animi! In excepturi voluptate ipsa sed quam natus.</p>
-				<p>Asperiores ullam inventore rerum esse, rem dicta doloribus quae beatae iure! Minima inventore dolor iure ab est nostrum sequi ipsa sit ad, itaque in autem laborum quia veritatis perspiciatis ullam.</p>
-				<p>Praesentium ipsam ipsa, quaerat cumque distinctio impedit dolorum est odio sequi voluptate. Voluptate, magni, quibusdam. Repudiandae dolorum neque ipsa excepturi ab officiis, labore mollitia qui, autem nulla in nostrum ipsum.</p>
-				<p>Pariatur ipsum repellat, consequuntur, doloribus iure laboriosam facilis id rem doloremque voluptatem dignissimos reprehenderit aliquam! Illum praesentium nulla similique. Distinctio quidem, fuga reprehenderit quibusdam repellendus quos asperiores beatae voluptas facere!</p>
-				<p>Dolorum quibusdam tempora quam unde necessitatibus aspernatur sequi iure ipsam magni eum. Aut necessitatibus quidem, vero ipsam dolores commodi magnam, fugiat ipsa, voluptatibus dolore aspernatur culpa dignissimos, laborum saepe quibusdam.</p>
-				
-			</section>	
-		
-		</main>
+
+			<div class="containerCarousel">
+
+			 	<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+				  <ol class="carousel-indicators">
+				    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				  </ol>
+
+			    <div class="carousel-inner">
+
+				    <div class="carousel-item active carouselImg"><!-- torneos-gamer.jpg -->
+				      	<img class="d-block w-100" src="images/pexels-photo-687811.jpeg" alt="First slide"> 
+				      	<div class="carousel-caption">
+				        	<h2><strong>Ready For The 2<sup>th</sup> Fortnite World Championship!!</strong></h2>
+				        	<button class="btn btn-lg btn-danger">
+				        		<a id='carrousel-register' href="tournaments.php?register">
+				        			Register NOW!! USD 99 until August 30<sup>th</sup></a>
+				        	</button>
+				   		</div>
+			    	</div>
+
+				    <div class="carousel-item carouselImg"><!-- accesories.jpg -->
+				      	<img class="d-block w-100" src="images/pexels-photo-929824.jpeg" alt="Second slide">
+				      	<div class="carousel-caption">
+				        	<h2><strong>Free Delivery Weekend!!</strong></h2>
+				        	<button class="btn btn-lg btn-warning">
+				        		<a id='carrousel-register' href="shop.php?freeDeliveryWeekend">
+				        			SHOP NOW</a>
+				        	</button>
+				      	</div>
+				    </div>
+
+				    <div class="carousel-item carouselImg"><!--noticias-gamers.png-->
+				      	<img class="d-block w-100" src="images/pexels-photo-1293269.jpeg" alt="Third slide">
+				      	<div class="carousel-caption">
+				        	<h2><strong>BOOOMMM! FIFA 2020 last leeks!!!</strong></h2>
+				        	<button class="btn btn-lg btn-info">
+				        		<a id='carrousel-news' href="news.php?newsFromHome">
+				        			Read more...</a>
+				        	</button>
+				      	</div>
+				    </div>
+			  
+			  	</div>
+
+			  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  
+			  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			
+			</div>
+
+		 </div>
+
+
+	 <div class="container"><br>
+
+	 		<h3>Last news!!!</h3><br>
+
+			<div class="row col-sm-12">
+
+			    <article class="col-sm-6">
+			    	<h3><?php echo date("y-m-d");?> - News #1</h3>
+			    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorum explicabo cum nihil incidunt eius debitis, ea unde dolor eos? Ab aperiam modi quod repellat incidunt accusantium, maiores, minima. Ab.</p>
+			    </article>
+
+			    <article class="col-sm-6">
+			    	<h3><?php echo date("y-m-d");?> - News #2</h3>
+			    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorum explicabo cum nihil incidunt eius debitis, ea unde dolor eos? Ab aperiam modi quod repellat incidunt accusantium, maiores, minima. Ab.</p>
+			    </article>
+		    </div>
+
+			<div class="row col-sm-12">
+
+			    <article class="col-sm-6">
+			    	<h3><?php echo date("y-m-d");?> - News #3</h3>
+			    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorum explicabo cum nihil incidunt eius debitis, ea unde dolor eos? Ab aperiam modi quod repellat incidunt accusantium, maiores, minima. Ab.</p>
+			    </article>
+
+			    <article class="col-sm-6">
+			    	<h3><?php echo date("y-m-d");?> - News #4</h3>
+			    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorum explicabo cum nihil incidunt eius debitis, ea unde dolor eos? Ab aperiam modi quod repellat incidunt accusantium, maiores, minima. Ab.</p>
+			    </article>
+		    </div>
+
+			<div class="row col-sm-12">
+
+			    <article class="col-sm-6">
+			    	<h3><?php echo date("y-m-d");?> - News #5</h3>
+			    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorum explicabo cum nihil incidunt eius debitis, ea unde dolor eos? Ab aperiam modi quod repellat incidunt accusantium, maiores, minima. Ab.</p>
+			    </article>
+
+			    <article class="col-sm-6">
+			    	<h3><?php echo date("y-m-d");?> - News #6</h3>
+			    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorum explicabo cum nihil incidunt eius debitis, ea unde dolor eos? Ab aperiam modi quod repellat incidunt accusantium, maiores, minima. Ab.</p>
+			    </article>
+		    </div>
+
+		  </div>
+	</div>
+
+</main>
 
 <?php 
 	// Body-footer inclusion

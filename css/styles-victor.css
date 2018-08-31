@@ -59,6 +59,12 @@ a:active, a:link, a:visited, a:hover #subscribe {
     right: 10px;
 }
 
+.carouselImg img {
+  width: auto;
+  height: 1000px;
+  max-height: 1000px;
+}
+
 /* ------ Body-header ------ */
 
 /*header div img {
