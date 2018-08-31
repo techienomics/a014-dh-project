@@ -13,8 +13,7 @@
 	require_once 'partials/body-aside.php';
 ?>
 
-		<main>
-
+		<main class="container justify-content-center">
 
 			<div class="row">
 
@@ -35,7 +34,7 @@
 						</div>
 						<div class="col-sm-4">
 								<button id="signin-googleplus" type="button" class="btn btn-danger btn-sm">
-									<a href="#">Sign up<ion-icon name="logo-googleplus"></ion-icon></a>
+									<a href="#">Sign up <ion-icon name="logo-googleplus"></ion-icon></a>
 								</button>
 						</div>
 					
@@ -52,7 +51,7 @@
 				</div>
 
 				<div class="col-sm-4">
-
+					
 					<!-- Subscriber form -->
 					<?php $visibleField = !isset($_GET["subscribe"]); ?>
 					<?= ($visibleField) ? "<h3>Benefits to join:</h3>" :

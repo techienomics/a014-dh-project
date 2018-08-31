@@ -71,7 +71,7 @@
 ?>
 
 
-	<form method="post" target="_self">
+	<form method="post" target="_self" action="account.php?register">
 
 		<ul>
 			<?php foreach ($errors as $oneError): ?>
@@ -82,81 +82,67 @@
 		<br><small>* Required fields</small><br>
 
 		<fieldset>
-
-			<!-- Login form -->
-			<?php $visibleField = !isset($_GET["login"]); ?>
-			<?php if ($visibleField): ?>
 			
 			<label>Personal Information</label><br>
 
-			<div class="form-inline">
+			<div class="form-inline form-group">
 				First Name*:&nbsp;
-				<input type="text" name="userFirstName" id="userFirstName"
+				<input type="text" name="userFirstName" id="userFirstName" class="form-control"
 									value="<?= $userFirstName ?>" required><br>
 				<span class="alert alert-success">
 					<?= isset($errors["userFirstName"]) ? $errors["userFirstName"] : '' ?>
 				</span>
 			</div>
 			
-			<div class='form-inline'>
+			<div class="form-inline form-group">
 				Last Name*:&nbsp;
-				<input type="text" name="userLastName" id="userLastName" 
+				<input type="text" name="userLastName" id="userLastName" class="form-control" 
 									value="<?= $userLastName ?>" required><br>
 				<span class="alert alert-success">
 					<?= isset($errors["userLastName"]) ? $errors["userLastName"] : '' ?>
 				</span>
 			</div>
-
-			<?php endif; ?>
 			
-			<div class='form-inline'>
+			<div class='form-inline form-group'>
 				User Email*:&nbsp;
-				<input type="email" name="userEmail" id="userEmail" 
+				<input type="email" name="userEmail" id="userEmail" class="form-control"
 									value="<?= $userEmail ?>" required><br>
 				<span class="alert alert-success">
 					<?= isset($errors["userEmail"]) ? $errors["userEmail"] : '' ?>
 				</span>
 			</div>
 
-			<div class='form-inline'>
+			<!-- Subscriber form -->
+			<?php $visibleField = !isset($_GET["subscribe"]); ?>
+			<?php if ($visibleField): ?>
+
+			<div class='form-inline form-group'>
 				Password*:&nbsp;
-				<input type="password" name="userPassword" id="userPassword" 
+				<input type="password" name="userPassword" id="userPassword" class="form-control"
 									value=">" required><br>
 				<span class="alert alert-success">
 					<?= isset($errors["userPassword"]) ? $errors["userPassword"] : '' ?>
 				</span>
 			</div>
 
-			<!-- Subscriber & Login form -->
-		<?php (!isset($_GET["subscribe"]) || isset($_GET["login"])) ?
-				 $visibleField = true : $visibleField = false ?>
-		<?php if ($visibleField): ?>
-
-			<div class='form-inline'>
+			<div class='form-inline form-group'>
 				Repeat your Password*:&nbsp;
-				<input type="password" name="repeatUserPassword" id="repeatUserPassword" 
+				<input type="password" name="repeatUserPassword" id="repeatUserPassword" class="form-control"
 									value="" required><br>
 				<span class="alert alert-success">
 					<?= isset($errors["repeatUserPassword"]) ? $errors["repeatUserPassword"] : '' ?>
 				</span>
 			</div>
 
-		<?php endif; ?>
-
 		</fieldset>
-
-		<!-- Subscriber & Login form -->
-		<?php (!isset($_GET["subscribe"]) || isset($_GET["login"])) ?
-				 $visibleField = true : $visibleField = false ?>
-		<?php if ($visibleField): ?>
 		
 		<fieldset>
 
 			<label">General Information</label><br>
 
-			<div class='form-inline'>
+			<div class='form-inline form-group'>
 				Choose a User Name*:&nbsp;
-				<input type="text" name="userName" id="userName" 
+				<input type="text" name="userName" id="userName" class="form-control"
 									value="<?= $userName ?>" required><br>
 				<span class="alert alert-success">
 					<?= isset($errors["userName"]) ? $errors["userName"] : '' ?>
@@ -202,15 +188,17 @@
 			<?php $visibleField = !isset($_GET["subscribe"]); ?>
 			<?php if ($visibleField): ?>
 
-			<div class='form-group'>
+			<div class="form-check">
+				<label class="form-check-label" for="userDataSave">
+    				<input type="checkbox" name="userDataSave" id="userDataSave" 
+    						class="form-check-input" value="">Remember me:&nbsp;
+ 				 </label>
+			</div><br>
 
-				<label for="userDataSave">Remember me:&nbsp;</label>
-					<input type="radio" name="userDataSave" id="userDataSave"><br>
-			</div>
-			
 			<?php endif; ?>
 
 			<button class="button btn-sm" type="reset">Clear all</button>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<button class="button btn-sm" type="submit">Sent

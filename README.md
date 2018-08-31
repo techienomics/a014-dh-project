@@ -23,10 +23,10 @@ A) Website tree
 <br>--- sign-up.php => sprint 1 (Register & Subscribe)
 <br>--- sign-in.php => sprint 1 (Login)
 <br>--- legals.php => sprint ?
-<br>----- #Terms of Service
-<br>----- #Privacy Policy
-<br>----- #Cookie Policy
-<br>----- #Forum Rules
+<br>------- #Terms of Service
+<br>------- #Privacy Policy
+<br>------- #Cookie Policy
+<br>------- #Forum Rules
 
 /images
 - logo
@@ -35,6 +35,7 @@ A) Website tree
 /css
 - normlize.css
 - our-styles.css
+- bootsrap-files.css
 
 /partials
 - head.php

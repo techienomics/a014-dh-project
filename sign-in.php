@@ -11,6 +11,8 @@
 
 	// Body-aside inclusion
 	require_once 'partials/body-aside.php';
+
+	
 ?>
 
 		<main>
@@ -30,7 +32,7 @@
 						</div>
 						<div class="col-sm-4">
 								<button id="signin-googleplus" type="button" class="btn btn-danger btn-sm">
-									<a href="#">Sign in<ion-icon name="logo-googleplus"></ion-icon></a>
+									<a href="#">Sign in <ion-icon name="logo-googleplus"></ion-icon></a>
 								</button>
 						</div>
 					
@@ -38,7 +40,7 @@
 
 					<?php 
 						// Form inclusion
-						require_once 'partials/user-form.php';
+						require_once 'partials/user-login-form.php';
 					?>
 
 					<a href="#">Forgot Password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

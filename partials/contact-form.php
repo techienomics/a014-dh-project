@@ -21,7 +21,7 @@
 	</div>
 -->
 
-			<form action="" method="post" target="_self">
+			<form method="post" target="_self">
 			
 			<label for="fullName">Nombre Completo:&nbsp;</label>
 			<input type="text" name="fullName" id="fullName" required><br>

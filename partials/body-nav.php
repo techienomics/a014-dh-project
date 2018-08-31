@@ -38,8 +38,8 @@
 			<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="me.php"
 				id="dropNavBar" role="button"  aria-haspopup="true" aria-expanded="false">Me</a>
 			    <div class="dropdown-menu" aria-labelledby="dropNavBar">
-			      <a class="dropdown-item" href="me.php">Profile</a>
-			      <a class="dropdown-item" href="me.php">Preferences</a><!--accesos a los perfiles-->
+			      <a class="dropdown-item" href="account.php">My Account</a>
+			      <a class="dropdown-item" href="me.php">Profile</a><!--accesos a los perfiles-->
 			    </div>
 			</li>
 			<li class="nav-item"><a class="nav-link" href="shop.php">Shop</a></li><!--comprar <games--></games-->

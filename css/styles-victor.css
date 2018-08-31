@@ -43,16 +43,18 @@ body{
 	text-decoration: none;
 }
 
-a:active, a:link, a:visited, a:hover #nav-login {
+/* a:active, a:link, a:visited, a:hover
+
+#nav-login {
 	color: white;
 	text-decoration: none;
 }
 
-a:active, a:link, a:visited, a:hover #subscribe {
+#subscribe {
 	color: white;
 	text-decoration: none;
 }
-
+ */
 #customer-service-chat {
 	position: fixed;
     bottom: 1px;
@@ -61,8 +63,8 @@ a:active, a:link, a:visited, a:hover #subscribe {
 
 .carouselImg img {
   width: auto;
-  height: 1000px;
-  max-height: 1000px;
+  height: 800px;
+  max-height: 800px;
 }
 
 /* ------ Body-header ------ */
