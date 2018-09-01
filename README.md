@@ -1,7 +1,5 @@
-# a014-social-gaming-dh-project
-Final Project | Fullstack web developer |  DigitalHouse
-
-Project Name: Be The Champion (A social gaming website)
+# a014-dh-project
+Finbile: Learning through data || Full-stack-dev-course's (DigitalHouse)
 
 A) Website tree
 
@@ -34,7 +32,7 @@ A) Website tree
 
 /css
 - normlize.css
-- our-styles.css
+- styles.css
 - bootsrap-files.css
 
 /partials
