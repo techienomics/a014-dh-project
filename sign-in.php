@@ -1,63 +1,119 @@
-<?php
-	// Head inclusion & Page Title definition
-	$pageTitle = 'Sign In | Be The Champion';
-	require_once 'partials/head.php';
+<?php #finbile sign-in
 
-	// Body-header inclusion
-	require_once 'partials/body-header.php';
+	require_once 'admin/autoload.php';
 
-	// Body-nav inclusion
-	require_once 'partials/body-nav.php';
+	if( $auth->isLoged() ) {
+		header('location: my-account.php');
+	}
 
-	// Body-aside inclusion
-	require_once 'partials/body-aside.php';
+	$pageTitle = 'Sign In |' . $websiteName;
+	require_once 'includes/head.php';
+	require_once 'includes/body-header.php';
+	require_once 'includes/body-navbar.php';
+	require_once 'includes/body-aside.php';
 
-	
+	if (!isset($_GET["forgotpassword"]) AND !isset($_GET["email"])) {
+		$SignInData = new SignInFormValidator($_POST);
+	} elseif (!isset($_GET["email"])) {
+		$SignInData = new ForgotPwdFormValidator($_POST);
+	} else {
+		$SignInData = new RenewPwdFormValidator($_POST);
+	}
+
+	if ($_POST) {
+
+		if ( $SignInData->isValid() ) {
+			$user = $db->getUserByEmail($_POST['email']);
+
+			if ( !$user ) {
+				$SignInData->addError('email', 'This email isn\'t registered, please try another one.');
+			} else if ( !password_verify($_POST['password'], $user->getPassword()) ) {
+				$SignInData->addError('password', 'Password is wrong, please try again.');
+			} else {
+				if ( isset($_POST['keepSignedIn']) ) {
+					setcookie('keepSignedIn', $_POST['email'], time() + (60*60*12));
+				}
+				$auth->SignIn($user->getEmail());
+			}
+		}
+	}
+
 ?>
 
-		<main>
-		
-			<h1>Log In</h1>
-			
-			<div class="row">
-				<div class="col-sm-8">
+<!-- Body-main -->
+<main>
+	
+	<div class="container" style="margin-top:30px; margin-bottom: 30px;">
+
+		<div class="row justify-content-center">
+
+			<div class="col-md-8">
+
+				<!-- Hide in a subscriber form -->
+				<?php if (!isset($_GET["forgotpassword"]) AND !isset($_GET["email"])): ?>
 
 					<h2>Welcome back!</h2>
+					<table>
+						<tr>
+							<td><p>Get start:</p></td>
+							<td>
+							<div class="col-sm-4">
+									<button id="signin-facebook" type="button" class="btn btn-info btn-sm">
+										<ion-icon name="logo-facebook"></ion-icon><a href="#"> Sign in</a>
+									</button>
+							</div><br>
+							<div class="col-sm-4">
+									<button id="signin-googleplus" type="button" class="btn btn-danger btn-sm">
+										<ion-icon name="logo-googleplus"></ion-icon><a href="#"> Sign in</a>
+									</button>
+							</div>
+							</td>
+						</tr>
+					</table>
 
-					<div class="row">
-						<div class="col-sm-4">
-								<button id="signin-facebook" type="button" class="btn btn-primary btn-sm">
-									<a href="#">Sign in <ion-icon name="logo-facebook"></ion-icon></a>
-								</button>
-						</div>
-						<div class="col-sm-4">
-								<button id="signin-googleplus" type="button" class="btn btn-danger btn-sm">
-									<a href="#">Sign in <ion-icon name="logo-googleplus"></ion-icon></a>
-								</button>
-						</div>
-					
+					<br><p>Or complete with your personal information:</p>
+					<?php require_once 'includes/signin-form.php'; ?>
+
+					<div class="col-md-6">
+						<a href="sign-in.php?forgotpassword">Forgot ID or password?</a>
 					</div>
 
-					<?php 
-						// Form inclusion
-						require_once 'partials/user-login-form.php';
-					?>
+				<?php elseif (!isset($_GET["email"])) : ?>
 
-					<a href="#">Forgot Password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="legals.php#privacy-policy">Privacy Policy</a>
+					<h2>Please, renew your password:</h2>
+					<p>You will receive an email with a recovery link. Please introduce your email address, send email and go to your inbox.</p><br>
+					
+					<?php require_once 'includes/forgotpwd-form.php'; ?>
 
-				</div>
+				<?php else: ?>
 
-				<div class="col-sm-4">
-					<h3>Next Events:</h3>
-				</div>
-			
+					<h2>Excelent, just one step more:</h2>
+					<p>Please introduce your email address and a new password twice.</p><br>
+					
+					<?php require_once 'includes/renewpwd-form.php'; ?>
+
+				<?php endif; ?>
+
+
 			</div>
-		
-		</main>
 
+			<div class="col-4">
 
-<?php 
-	// Body-footer inclusion
-	require_once 'partials/body-footer.php';
-?>
+				<br><br>
+				
+				<div class="alert alert-warning">
+					<p>
+					Make your company grow. <br>Ad here. <br>Call 501-232-2345.
+					<br><br><br><br><br><br><br><br><br><br>
+					</p>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</main>
+
+<?php require_once 'includes/body-footer.php'; ?>

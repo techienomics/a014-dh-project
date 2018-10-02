@@ -1,0 +1,264 @@
+/*  finbile css */
+
+/* -------- Import Fonts -------- */
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+/* -------- Import Bootstrap & General Resets -------- */
+@import url("normalize.css");
+@import url("bootstrap.min.css");
+
+/* -------- General Resets -------- */
+
+*{ 
+	box-sizing: border-box; /* Set the "universal" box-sizing */
+}
+
+ul,ol{
+	list-style: none;
+	padding: 0;
+	margin: 0;	
+}
+
+div {
+  -webkit-border-radius: 10px;  /* Safari  */
+  -moz-border-radius: 10px;     /* Firefox */
+}
+
+#myScrollspy {
+	position: relative;
+}
+
+
+
+/*
+
+/*  Mobile First - Smaller Displays */
+
+--------- Body ----------
+
+main {
+	font-family: 'Raleway', sans-serif;
+	width: 100%;
+}
+
+#nav-register a:active, a:link, a:visited, a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+a:active, a:link, a:visited, a:hover
+
+#nav-login {
+	color: white;
+	text-decoration: none;
+}
+
+#subscribe {
+	color: white;
+	text-decoration: none;
+}
+ */
+
+#home {
+	position: fixed;
+}
+
+#customer-service-chat {
+	position: fixed;
+    bottom: 1px;
+    right: 10px;
+}
+
+.carouselImg img {
+  width: auto;
+  height: 800px;
+  max-height: 800px;
+}
+
+/* ------ Body-header ------ */
+/*
+header div img {
+	float: left;
+}
+
+header div a #sign-in {
+	background-color: #FF005C;
+	float: right;
+	padding: 10px;
+	margin: 10px;
+	border: solid 1px #FF005C;
+}
+*/
+	------ Body-nav ------ */
+
+nav{
+	/*background-color: #FF005C;
+	color:white;*/
+	font-weight: bold;
+}
+
+nav a{
+	color:white;
+	display:block;
+}
+
+nav li{
+	width: 10%;
+	justify-content: center;
+	text-align: center;
+	padding: 5px 0px 5px 0px;
+	display: inline-block;
+	list-style: none;
+}
+
+/* ------ Body-aside ------ */
+
+aside{
+	width: 40%;
+}
+
+
+/* ------ Body-main ------ */
+
+body main{
+	width: 100%;
+	margin: auto;
+	padding: 15px;
+}
+
+
+/* ------ Body-footer ------ */
+
+
+footer{
+	background-color: #2E282A;
+	color:white;
+	padding: 15px;
+}
+
+/* ------------------------- */
+
+.container{
+	display:flex;
+	justify-content:space-around;
+}
+
+.social-media{
+	display:flex;
+	justify-content:space-around;
+}
+
+.social-media a{	
+	text-decoration: none;
+	color:#508fb8; 
+}
+
+
+
+body{
+	font-family: 'Raleway', sans-serif;
+	background-image: url('../images/bg-body.png');
+}
+
+img{
+	width: 100%;
+	border-radius: 50%;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+	margin: auto;
+}
+
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border: 1px solid #c7c7c7;
+	padding: 20px;
+	margin: 20px;
+}
+
+.card{
+	width: 100%;
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+}
+
+.card-image{
+	display: inline-block;
+	border-radius: 50px;
+}
+
+.social-media{
+	display:flex;
+	justify-content:space-around;
+}
+
+.social-media a{	
+	text-decoration: none;
+	color:#508fb8; 
+}
+
+span{
+	font-size: 3em;
+}
+
+.card-data a{
+	display: inline-block;
+	text-decoration: none;
+	color:white;
+	background-color: #c7c7c7;
+	padding: 15px 25px 15px 25px;
+	font-size: 1em;
+}
+
+.card-data a:hover {
+	background-color: #508fb8;
+}
+
+h2{
+	font-size: 2em;
+}
+
+p{
+	font-size: 1.3em;	
+}
+
+
+/*  Mobile First - Medium Screen (from here to bigger screens) */
+
+@media(min-width: 640px){
+	
+	.card{
+		width:50%;
+	}
+}
+
+/*  Mobile First - Large Screen (from here to bigger screens) */
+
+@media(min-width: 960px){
+	
+	.card{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+
+	.card-image{
+		width: 25%;
+	}
+
+	.card-data{
+		width: 25%;
+		flex-grow: 100%;
+	}
+
+
+	h2{
+		font-size: 1em;
+	}
+
+	p{
+		font-size: 0.8em;	
+	}
+}

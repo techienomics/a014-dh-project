@@ -1,130 +1,129 @@
-<?php
-	// Head inclusion & Page Title definition
-	$pageTitle = 'Home | Be The Champion';
-	require_once 'partials/head.php';
+<?php #finbile index
 
-	// Body-header inclusion
-	require_once 'partials/body-header.php';
-
-	// Body-nav inclusion
-	require_once 'partials/body-nav.php';
-
-	// Body-aside inclusion
-	require_once 'partials/body-aside.php';
+	require_once 'admin/autoload.php';
+	$pageTitle = 'Home';
+	require_once 'includes/head.php';
+	require_once 'includes/body-header.php';
+	require_once 'includes/body-navbar.php';
+	require_once 'includes/body-aside.php';
+	
 ?>
 
-		<main>
+<!-- Body-main -->
+<main>
 
-			<div class="containerCarousel">
+	<div class="container-fluid">
+	
+		<!-- Main-carousel -->
+		<div class="row">
+	 
+		 	<!-- Carousel: start -->
+		 	<div id="mainSlider" class="carousel slide carousel-fade" data-ride="carousel">
 
-			 	<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-				  <ol class="carousel-indicators">
-				    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-				  </ol>
-
+			  <!-- Carousel: indicators -->
+				<ul class="carousel-indicators">
+				    <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+				    <li data-target="#mainSlider" data-slide-to="1"></li>
+				    <li data-target="#mainSlider" data-slide-to="2"></li>
+					<li data-target="#mainSlider" data-slide-to="3"></li>
+				    <li data-target="#mainSlider" data-slide-to="4"></li>
+				    <li data-target="#mainSlider" data-slide-to="5"></li>
+				</ul>
+		    
+			    <!-- Carousel: slideshow -->
 			    <div class="carousel-inner">
 
-				    <div class="carousel-item active carouselImg"><!-- torneos-gamer.jpg -->
-				      	<img class="d-block w-100" src="images/pexels-photo-687811.jpeg" alt="First slide"> 
-				      	<div class="carousel-caption">
-				        	<h2><strong>Ready For The 2<sup>th</sup> Fortnite World Championship!!</strong></h2>
+				    <div class="carousel-item active carouselImg">
+				      	<img class="d-block w-100 img-thumbnail img-fluid" src="<?= BANNERS_PATH; ?>img_ball.jpg" alt="firstSlide"> 
+				      	<div class="carousel-caption d-none d-sm-block">
+				        	<h1><strong>Which State has more surface,<br>New York or Texas?</strong></h1>
 				        	<button class="btn btn-lg btn-danger">
-				        		<a id='carrousel-register' href="tournaments.php?register">
-				        			Register NOW!! USD 99 until August 30<sup>th</sup></a>
+				        		<a id='' href="sign-up.php?home">
+				        			Start now and Make Money!!<br>
+				        			Sign up for only $4,90 until Oct 3<sup>th</sup></a>
 				        	</button>
 				   		</div>
 			    	</div>
 
-				    <div class="carousel-item carouselImg"><!-- accesories.jpg -->
-				      	<img class="d-block w-100" src="images/pexels-photo-929824.jpeg" alt="Second slide">
-				      	<div class="carousel-caption">
-				        	<h2><strong>Free Delivery Weekend!!</strong></h2>
-				        	<button class="btn btn-lg btn-warning">
-				        		<a id='carrousel-register' href="shop.php?freeDeliveryWeekend">
-				        			SHOP NOW</a>
+				    <div class="carousel-item carouselImg">
+				      	<img class="d-block w-100 img-thumbnail img-fluid" src="<?= BANNERS_PATH; ?>img_architecture.jpg" alt="secondSlide">
+				      	<div class="carousel-caption d-none d-sm-block">
+				        	<h1><strong>Recognize that skyscraper?<br>Petronas Towers or Etihad Towers</strong></h1>
+				        	<button class="btn btn-lg btn-dark">
+				        		<a id='' href="shop.php?fromhome">
+				        			Start now and Make Money!!<br>
+				        			Sign up for only $4,90 until Oct 3<sup>th</sup></a>
 				        	</button>
 				      	</div>
 				    </div>
 
-				    <div class="carousel-item carouselImg"><!--noticias-gamers.png-->
-				      	<img class="d-block w-100" src="images/pexels-photo-1293269.jpeg" alt="Third slide">
-				      	<div class="carousel-caption">
-				        	<h2><strong>BOOOMMM! FIFA 2020 last leeks!!!</strong></h2>
-				        	<button class="btn btn-lg btn-info">
-				        		<a id='carrousel-news' href="news.php?newsFromHome">
-				        			Read more...</a>
+				    <div class="carousel-item carouselImg">
+				      	<img class="d-block w-100 img-thumbnail img-fluid" src="<?= BANNERS_PATH; ?>img_blockchain.jpg" alt="thirdSlide">
+				      	<div class="carousel-caption d-none d-sm-block">
+				        	<h1><strong>Finbile coins are now in the Markets!!!</strong></h1>
+				        	<button class="btn btn-lg btn-warning">
+				        		<a id='' href="shop.php?buyfincoins">
+				        			BUY NOW fincoins<sup>&reg</sup> using Cryptos <br> at the best rate. Check  our quotes>> </a>
 				        	</button>
 				      	</div>
 				    </div>
+
+				    <div class="carousel-item carouselImg">
+				      	<img class="d-block w-100 img-thumbnail img-fluid" src="<?= BANNERS_PATH; ?>img_clocks.jpg" alt="thirdSlide">
+				      	<div class="carousel-caption d-none d-sm-block">
+				        	<h1><strong>What time is now at Moscow?<br>
+				        				<?= date("H:m:s");?> or <?= date("H:i:s") ;?></strong></h1>
+				        	<button class="btn btn-lg btn-danger">
+				        		<a id='' href="sign-up.php?fromhome">
+				        			Start now and Make Money!!<br>
+				        			Sign up for only $4,90 until Oct 3<sup>th</sup></a>
+				        	</button>
+				      	</div>
+				    </div>
+
+				    <div class="carousel-item carouselImg">
+				      	<img class="d-block w-100 img-thumbnail img-fluid" src="<?= BANNERS_PATH; ?>img_ancient.jpg" alt="thirdSlide">
+				      	<div class="carousel-caption d-none d-sm-block">
+				        	<h1><strong>Which city was founded first,<br>
+				        				Alexandria or Tebas??</strong></h1>
+				        	<button class="btn btn-lg btn-info">
+				        		<a id='' href="sign-up.php?fromhome">
+				        			Start now and Make Money!!<br>
+				        			Sign up for only $4,90 until Oct 3<sup>th</sup></a>
+				        	</button>
+				      	</div>
+				    </div>
+
+					<div class="carousel-item carouselImg">
+					  	<img class="d-block w-100 img-thumbnail img-fluid" src="<?= BANNERS_PATH; ?>img_colour.jpg" alt="thirdSlide">
+					  	<div class="carousel-caption d-none d-sm-block">
+					    	<h1><strong>Day off from TV?</strong></h1>
+					    	<button class="btn btn-lg btn-warning">
+					    		<a id='' href="news.php?fromhome">
+					    			Don't worry,<br>read here the principal news</a>
+					    	</button>
+					  	</div>
+					</div>		    
 			  
 			  	</div>
 
-			  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			    <span class="sr-only">Previous</span>
-			  </a>
-			  
-			  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			    <span class="sr-only">Next</span>
-			  </a>
-			
+				<!-- Carousel: Left & right controls -->
+				<a class="carousel-control-prev" href="#mainSlider" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				</a>
+				  
+				<a class="carousel-control-next" href="#mainSlider" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				</a>
+		
 			</div>
 
-		 </div>
+		</div>
 
-
-	 <div class="container"><br>
-
-	 		<h3>Last news!!!</h3><br>
-
-			<div class="row col-sm-12">
-
-			    <article class="col-sm-6">
-			    	<h3><?php echo date("y-m-d");?> - News #1</h3>
-			    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorum explicabo cum nihil incidunt eius debitis, ea unde dolor eos? Ab aperiam modi quod repellat incidunt accusantium, maiores, minima. Ab.</p>
-			    </article>
-
-			    <article class="col-sm-6">
-			    	<h3><?php echo date("y-m-d");?> - News #2</h3>
-			    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorum explicabo cum nihil incidunt eius debitis, ea unde dolor eos? Ab aperiam modi quod repellat incidunt accusantium, maiores, minima. Ab.</p>
-			    </article>
-		    </div>
-
-			<div class="row col-sm-12">
-
-			    <article class="col-sm-6">
-			    	<h3><?php echo date("y-m-d");?> - News #3</h3>
-			    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorum explicabo cum nihil incidunt eius debitis, ea unde dolor eos? Ab aperiam modi quod repellat incidunt accusantium, maiores, minima. Ab.</p>
-			    </article>
-
-			    <article class="col-sm-6">
-			    	<h3><?php echo date("y-m-d");?> - News #4</h3>
-			    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorum explicabo cum nihil incidunt eius debitis, ea unde dolor eos? Ab aperiam modi quod repellat incidunt accusantium, maiores, minima. Ab.</p>
-			    </article>
-		    </div>
-
-			<div class="row col-sm-12">
-
-			    <article class="col-sm-6">
-			    	<h3><?php echo date("y-m-d");?> - News #5</h3>
-			    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorum explicabo cum nihil incidunt eius debitis, ea unde dolor eos? Ab aperiam modi quod repellat incidunt accusantium, maiores, minima. Ab.</p>
-			    </article>
-
-			    <article class="col-sm-6">
-			    	<h3><?php echo date("y-m-d");?> - News #6</h3>
-			    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolorum explicabo cum nihil incidunt eius debitis, ea unde dolor eos? Ab aperiam modi quod repellat incidunt accusantium, maiores, minima. Ab.</p>
-			    </article>
-		    </div>
-
-		  </div>
 	</div>
 
 </main>
 
-<?php 
-	// Body-footer inclusion
-	require_once 'partials/body-footer.php';
-?>
+<?php require_once 'includes/body-footer.php'; ?>

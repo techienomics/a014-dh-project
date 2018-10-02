@@ -1,100 +1,105 @@
-<?php
-	// Head inclusion & Page Title definition
-	$pageTitle = 'User Profile | Be The Champion';
-	require_once 'partials/head.php';
+<?php #finbile me
 
-	// Body-header inclusion
-	require_once 'partials/body-header.php';
+	require_once 'admin/autoload.php'; 
 
-	// Body-nav inclusion
-	require_once 'partials/body-nav.php';
+	if ( !$auth->isLoged() ) {
+		header('location: sign-in.php');
+	}
 
-	// Body-aside inclusion
-	require_once 'partials/body-aside.php';
+	$pageTitle = 'MyProfile | ' . $websiteName;
+	require_once 'includes/head.php';
+	require_once 'includes/body-header.php';
+	require_once 'includes/body-navbar.php';
+	require_once 'includes/body-aside.php';
+
 ?>
 
-		<main>
+<!-- Body-main -->
+<main>
 				
-				<h1>User's Profile</h1>
+	<div class="container" style="margin-top: 20px;">
+	
+		<div class="row col-12">
+			<h1>User's Profile</h1>
+		</div>
+
+		<div class="row col-12">
+
+			<div class="col-4 alert alert-secondary"> <!-- Personal info -->
+
 				
-				<h2>Personal Information</h2>	
+				<?php if (!isset($_GET["editpassword"])): ?>
 
-			<div class="user-container">
+				<h2>Personal Information</h2>
 
+				<img src="admin/data/avatars/<?= $theUser->getImage() ?>" width="100%"><br><br>
+				<p>Actual data:</p>
+				<p>Nombre: <b><?= $theUser->getFirstName() ?> <?= $theUser->getLastName() ?></b><p>
+				<p>Email: <b><?= $theUser->getEmail() ?></b><p>
+				<p>Nickname: <b><?= $theUser->getNickname() ?></b><p>
+				<p>Country: <b><?= COUNTRIES[$theUser->getCountry()]; ?></b><p>
+				<p>Gender: <b><?= GENDER[$theUser->getGender()]; ?></b><p>
+				<a class="btn btn-dark" href="me.php?editpassword" role="button">Edit</a>
+				
+				<?php else: ?>
+
+				<h2>Edit your password:</h2>
+
+				<div class="col-md-6">
+					<div class="form-group"><label><b>New Password:</b></label>
+						<input type="password" name="password" class="form-control">
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="form-group"><label><b>Repeat Password:</b></label>
+						<input type="password" name="password" class="form-control">
+					</div>
+				</div>
+				<?php endif; ?>
+				
+			</div>
+
+
+			</div>
+			
+			<div class="col-8 alert"> <!-- Preferences -->
+
+				<h2>Complete your preferences:</h2>
+		
 				<ul class="list-unstyled">
-			  		<li class="media">
-					    <img class="mr-3" src="images/user-icon.png">
-					    
-			    <div class="media-body">
-			      <h5 class="mt-0 mb-1">Personal Information</h5>
-			      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-			    </div>
-			  </li>
-			  <li class="media my-4">
-			    <img class="mr-3" src="images/ps4-xbox-pcc.jpg" alt="Generic placeholder image">
-			    <div class="media-body">
-			      <h5 class="mt-0 mb-1"> Plataform</h5>
-						<label class="container">Playstation 4
-						  <input type="checkbox">
-						  <span class="checkmark"></span>
-						</label>
-						<label class="container">Xbox One
-						  <input type="checkbox">
-						  <span class="checkmark"></span>
-						</label>
-						<label class="container">Switch
-						  <input type="checkbox">
-						  <span class="checkmark"></span>
-						</label>
-						<label class="container">Xbox 360
-						  <input type="checkbox">
-						  <span class="checkmark"></span>
-						</label>
-						<label class="container">Playstation 3
-						  <input type="checkbox">
-						  <span class="checkmark"></span>
-						</label>
-			    </div>
-			  </li>
-			  <li class="media">
-			    <img class="mr-3" src="images/genres.jpg" alt="Generic placeholder image">
-			    <div class="media-body">
-			      <h5 class="mt-0 mb-1">Genre</h5>
-						<label class="container">Accion
-						  <input type="checkbox">
-						  <span class="checkmark"></span>
-						</label>
-						<label class="container">Aventura
-						  <input type="checkbox">
-						  <span class="checkmark"></span>
-						</label>
-						<label class="container">Deportes
-						  <input type="checkbox">
-						  <span class="checkmark"></span>
-						</label>
-						<label class="container">Estrategia
-						  <input type="checkbox">
-						  <span class="checkmark"></span>
-						</label>
-						<label class="container">Multijugador Online
-						  <input type="checkbox">
-						  <span class="checkmark"></span>
-						</label>
-						<label class="container">Plataformas
-						  <input type="checkbox">
-						  <span class="checkmark"></span>
-						</label>
-						<label class="container">Simulacion
-						  <input type="checkbox">
-						  <span class="checkmark"></span>
-						</label>
-			    </div>
-			  </li>
 
+				 	<li class="media">
+				    <div class="container">
+				      	<h5 class="mt-0 mb-1">Favorite subjects:</h5>
+						<input type="checkbox"><label>Math</label><br>
+						<input type="checkbox"><label>Idioms</label>
+						<input type="checkbox"><label>Science</label>
+						<input type="checkbox"><label>Geography</label>
+						<input type="checkbox"><label>Commerce</label>
+						<a class="btn btn-dark" href="#" role="button">Save</a>
+				    </div>
+					</li>
 
-			</section>
+					<li class="media">
+				      <div class="container">
+				        <h5 class="mt-0 mb-1">Preferred time to be challenged:</h5>
+				  		<input type="checkbox"><label>Early Morning</label><br>
+				  		<input type="checkbox"><label>Mid Morning</label>
+				  		<input type="checkbox"><label>Midday</label>
+				  		<input type="checkbox"><label>Early Afternoon</label>
+				  		<input type="checkbox"><label>Evening</label>
+				  		<a class="btn btn-dark" href="#" role="button">Save</a>
+				      </div>
+				    </li>
+				</ul>
 
-<?php 
-	// Body-footer inclusion
-	require_once 'partials/body-footer.php';
-?>
+			</div>
+
+		</div>
+
+	</div>
+
+</main>
+
+<?php require_once 'includes/body-footer.php'; ?>

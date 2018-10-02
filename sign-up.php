@@ -1,70 +1,99 @@
-<?php
-	// Head inclusion & Page Title definition
-	$pageTitle = 'Sign Up | Be The Champion';
-	require_once 'partials/head.php';
+<?php #finbile sign-up
 
-	// Body-header inclusion
-	require_once 'partials/body-header.php';
+	require_once 'admin/autoload.php';
 
-	// Body-nav inclusion
-	require_once 'partials/body-nav.php';
+	if( $auth->isLoged() ) {
+		header('location: my-account.php');
+	}
 
-	// Body-aside inclusion
-	require_once 'partials/body-aside.php';
+	$pageTitle = 'Sign Up |' . $websiteName;
+	require_once 'includes/head.php';
+	require_once 'includes/body-header.php';
+	require_once 'includes/body-navbar.php';
+	require_once 'includes/body-aside.php';
+
+	$FormData = new SignUpFormValidator($_POST, $_FILES);
+
+	if ($_POST) {
+		if ( $FormData->isValid() ) {
+			if ($db->emailExist($FormData->getEmail())) {
+				$FormData->addError('email', 'This email is already in use.');
+			} 
+			if ($db->nicknameExist($FormData->getNickname())) {
+				$FormData->addError('nickname', 'This nickname is already in use.');
+			}
+			else {
+				$imageName = SaveImage::uploadImage($_FILES['avatar']);
+				$_POST['image'] = $imageName;
+				$user = new User($_POST);
+				$user->setId($db->generateId());
+				$db->saveUser($user);
+				$auth->SignUp($user->getEmail());
+			}
+		}
+	}
+
 ?>
 
-		<main class="container justify-content-center">
+<!-- Body-main -->
+<main>
 
-			<div class="row">
+	<div class="container" style="margin-top:30px; margin-bottom: 30px;">
 
-				<div class="col-sm-8">
+		<div class="row justify-content-left">
+
+			<div class="col-8">
 
 				<!-- Subscriber form -->
-				<?php $visibleField = !isset($_GET["subscribe"]); ?>
-				<?= ($visibleField) ? "<h1>Register</h1>" : 
-								"<h1>Tournaments Alerts: subscribe </h1>"; ?>
+				<?= !isset($_GET["subscribe"]) ? "<h1>Sign up</h1>" : "<h1>Challenge alerts!!</h1>"; ?>
+				
+				<table>
+					<tr>
+						<td><p>Get start:</p></td>
+						<td>
 
-					<h2>Get started:</h2>
-
-					<div class="row">
-						<div class="col-sm-4">
-								<button id="signin-facebook" type="button" class="btn btn-primary btn-sm">
-									<a href="#">Sign up <ion-icon name="logo-facebook"></ion-icon></a>
-								</button>
-						</div>
-						<div class="col-sm-4">
-								<button id="signin-googleplus" type="button" class="btn btn-danger btn-sm">
-									<a href="#">Sign up <ion-icon name="logo-googleplus"></ion-icon></a>
-								</button>
-						</div>
-					
+					<div class="col-sm-4">
+							<button id="signin-facebook" type="button" class="btn btn-info btn-sm">
+								<ion-icon name="logo-facebook"></ion-icon><a href="#">
+								 <?= !isset($_GET["subscribe"]) ? " Sign up" : " Subscribe"; ?>
+								</a>
+							</button>
+					</div><br>
+					<div class="col-sm-4">
+							<button id="signin-googleplus" type="button" class="btn btn-danger btn-sm">
+								<ion-icon name="logo-googleplus"></ion-icon><a href="#">
+								 <?= !isset($_GET["subscribe"]) ? " Sign up" : " Subscribe"; ?>
+								</a>
+							</button>
 					</div>
+						
+						</td>
+					</tr>
+				</table>
 
-					<?php 
-						// Form inclusion
-						require_once 'partials/user-form.php';
-					?>
+				<br><p>Or complete with your personal information:</p>
+				<?php require_once 'includes/signup-form.php'; ?>
 
-					<a href="#">Forgot Password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="legals.php#privacy-policy">Privacy Policy</a>
-
-				</div>
-
-				<div class="col-sm-4">
-					
-					<!-- Subscriber form -->
-					<?php $visibleField = !isset($_GET["subscribe"]); ?>
-					<?= ($visibleField) ? "<h3>Benefits to join:</h3>" :
-								"<h3>Benefits to subscribe: </h3>"; ?>
-					<!--registro: recordatorio de los beneficios-->
-				</div>
-			
 			</div>
 
-		</main>
+			<div class="col-4">
 
-	
-<?php 
-	// Body-footer inclusion
-	require_once 'partials/body-footer.php';
-?>
+				<br><br>
+				
+				<div class="alert alert-warning">
+					<p>
+					Make your company grow. <br>Ad here. <br>Call 501-232-2345.
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					</p>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</main>
+
+<?php require_once 'includes/body-footer.php'; ?>

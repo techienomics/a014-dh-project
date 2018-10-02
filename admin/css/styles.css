@@ -1,0 +1,104 @@
+/*  finbile css */ 
+
+/* -------- Import Fonts -------- */
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+/* -------- Import Bootstrap & General Resets -------- */
+@import url("normalize.css");
+@import url("bootstrap.min.css");
+
+/* -------- General Resets -------- */
+
+* { 
+	box-sizing: border-box; /* Set the "universal" box-sizing */
+}
+
+ul,ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;	
+}
+
+div {
+  -webkit-border-radius: 10px;  /* Safari  */
+  -moz-border-radius: 10px;     /* Firefox */
+}
+
+
+/* -------- General Resets -------- */
+
+body {
+	font-family: 'Raleway', sans-serif;
+	width: 100%;
+	padding: 5px;
+}
+
+/* ------ Body-aside ------ */
+
+aside{
+	width: 40%;
+}
+
+
+/* ------ Body-main ------ */
+
+main {
+	width: 100%;
+	margin: auto;
+}
+
+/* ------ Body-na ------ */
+
+nav {
+	width: 100%;
+	margin: auto;
+}
+
+li a:active, li a:link, li a:visited {
+	color: orange;
+	text-decoration: none;
+}
+
+div a:active, div a:link, div a:visited {
+	color: orange;
+	text-decoration: none;
+}
+
+small a:active, small a:link, small a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+button a:active, button a:link, button a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color: gray;
+	text-decoration: none;
+}
+
+footer {
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+/* ------ By Id ------ */
+
+#customer-service-chat {
+	position: fixed;
+    bottom: 1px;
+    right: 10px;
+}
+
+#mainNavBar {
+	position: relative;
+	top:0px;
+}
+
+.carouselImg img {
+  width: auto;
+  height: 650px;
+  max-height: 650px;
+}

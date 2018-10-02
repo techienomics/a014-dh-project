@@ -29,19 +29,15 @@ A) Website tree
 <br>------- #Cookie Policy
 <br>------- #Forum Rules
 
-
 /images
 
 - logo
 - favicon
 
-
 /css
-
 - normlize.css
 - styles.css
 - bootsrap-files.css
-
 
 /partials
 - head.php
@@ -53,7 +49,6 @@ A) Website tree
 - user.form.php
 - contact-form.php
 
-
 url: external links
 - bootstrap CDN
 - Facebook
@@ -61,4 +56,3 @@ url: external links
 - Linkedin
 - Instagram
 - Slack
-

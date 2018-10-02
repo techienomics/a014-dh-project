@@ -1,75 +1,80 @@
-<?php
-	// Head inclusion & Page Title definition
-	$pageTitle = 'About | Be The Champion';
-	require_once 'partials/head.php';
+<?php #finbile about
 
-	// Body-header inclusion
-	require_once 'partials/body-header.php';
-
-	// Body-nav inclusion
-	require_once 'partials/body-nav.php';
-
-	// Body-aside inclusion
-	require_once 'partials/body-aside.php';
+	require_once 'admin/autoload.php';
+	$pageTitle = 'About | ' . $websiteName;
+	require_once 'includes/head.php';
+	require_once 'includes/body-header.php';
+	require_once 'includes/body-navbar.php';
+	require_once 'includes/body-aside.php';
+	
 ?>
 
-		<main>
+<!-- Body-main -->
+<main>
+
+	<div class="container">
 		
-			<section class="row">
-				
-				<h1>About us <small>Be The Champions</small></h1>
-				
-				<article class="col-sm-6">
-						<p>Be The Champions is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ipsa nesciunt soluta possimus eius, tempore provident voluptate natus eaque sit cupiditate culpa, incidunt dolores deserunt ad vel! Nulla, eum, debitis!</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptates suscipit, quisquam voluptas mollitia, omnis accusantium qui minus rerum et modi molestias tempore cupiditate sunt labore. Quibusdam, nam, officia! Error.</p>
-				</article>
+		<div class="row">
+			
+			<div class="col-6">
 
-				<article class="col-sm-6">
-					<h4 class="" id="">Watch our print</h4>
-						<video id="mi video1"  width="320" autoplay controls loop poster="video-player.jpg">
-							<source src="/Users/victorpoma/Downloads/prueba_video.m4v" type="">
-								Your browser does not support the video tag.
-						</video>
-				</article>
-				
-			</section>
-		
-			<section class="row">
+				<h1>About us</h1>
+				<p><b>finbile</b> is the leading knowledge competition about general culture on web. People challenge other people over core topics like geography, demography, commerce or art.</p>
 
-				<h2 class="col-sm-12" id="faq-list">FAQ | Frequently Asked Questions</h2>
+			</div>
 
-				<div calss="col-sm-12" id="faq">
+			<div class="col-6">
 
-				  <div id="faq-1" class="card">
-				    <div class="card-header">
-				      <a class="card-link" data-toggle="collapse" href="#collapse-1">
-				        FAQ #1. Creating an account
-				      </a>
-				    </div>
-				    <div id="collapse-1" class="collapse show" data-parent="#faq">
-				      <div class="card-body">
-				        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos nam explicabo distinctio totam eligendi ipsam minima incidunt animi ducimus impedit dolor maiores, quibusdam, perspiciatis id voluptatem odio ratione molestiae.
-				      </div>
-				    </div>
-				  </div>
+				<h1> </h1>
+				<h4 id="">Watch our print</h4>
+				<video id="mi video1"  width="320" autoplay controls loop poster="video-player.jpg">
+					<source src="https://www.youtube.com/watch?v=x_nQekbcNUI" type="">
+						<!--/Users/victorpoma/Downloads/prueba_video.m4v-->
+						Your browser does not support the video tag.
+				</video>
 
-				  <div id="faq-2" class="card">
-				    <div class="card-header">
-				      <a class="collapsed card-link" data-toggle="collapse" href="#collapse-2">
-				        FAQ #2. A Tour of Your Profile Page
-				      </a>
-				    </div>
-				    <div id="collapse-2" class="collapse" data-parent="#faq">
-				      <div class="card-body">
-				        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos nam explicabo distinctio totam eligendi ipsam minima incidunt animi ducimus impedit dolor maiores, quibusdam, perspiciatis id voluptatem odio ratione molestiae.
-				      </div>
-				    </div>
-				  </div>
+			</div>
+			
+		</div>
+
+		<div class="row">
+			
+			<div id="faq">
+
+				<h2 class="col-10" id="faq-list">FAQ | Frequently Asked Questions</h2>
+
+					<div id="faq-1" class="card">
+					    <div class="card-header">
+						    <a class="card-link" data-toggle="collapse" href="#collapse-1">
+						        FAQ #1. Creating an account
+						    </a>
+					    </div>
+					    <div id="collapse-1" class="collapse show" data-parent="#faq">
+						    <div class="card-body">
+						        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos nam explicabo distinctio totam eligendi ipsam minima incidunt animi ducimus impedit dolor maiores, quibusdam, perspiciatis id voluptatem odio ratione molestiae.
+						    </div>
+					    </div>
+				  
+				  	</div>
+
+				  	<div id="faq-2" class="card">
+					    <div class="card-header">
+					      <a class="collapsed card-link" data-toggle="collapse" href="#collapse-2">
+					        FAQ #2. A Tour of Your Profile Page
+					      </a>
+					    </div>
+					    <div id="collapse-2" class="collapse" data-parent="#faq">
+					      <div class="card-body">
+					        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos nam explicabo distinctio totam eligendi ipsam minima incidunt animi ducimus impedit dolor maiores, quibusdam, perspiciatis id voluptatem odio ratione molestiae.
+					      </div>
+					    </div>
+
+				  	</div>
 
 				  <div id="faq-3" class="card">
 				    <div class="card-header">
 				      <a class="collapsed card-link" data-toggle="collapse" href="#collapse-3">
-				        FAQ #3. Joining Tournaments
+				        FAQ #3. Challenge
 				      </a>
 				    </div>
 				    <div id="collapse-3" class="collapse" data-parent="#faq">
@@ -118,49 +123,19 @@
 				    </div>
 				  </div>
 
-				</div>
+			</div>
 
-			</section>
+		</div>
 
-			<section class="row">
-				
-				<article class="col-sm-12">
-					<h3>Any further doubt? <small>Ask Albert:</small></h3>
-						<p>Be The Champions is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ipsa nesciunt soluta possimus eius, tempore provident voluptate natus eaque sit cupiditate culpa, incidunt dolores deserunt ad vel! Nulla, eum, debitis!</p>
-						<p></p>
-				</article>
+		<div class="row">
 
-			</section>
+			<h3>Any further doubt?</h3>
+			<a href="#"><button class="btn btn-warning">Ask Victor:</button></a>
 
-		</main>
+		</div>
 
-<?php 
-	// Body-footer inclusion
-	require_once 'partials/body-footer.php';
-?>
+	</div>
 
+</main>
 
-
-<!-- table class="table table-hover">
-
-    <thead>
-      <tr><th>
-      	<h2 class="" id="faq">FAQ | Frequently Asked Questions</h2>
-      </th></tr>
-    </thead>
-
-    <tbody>
-      <tr><td>
-      	<h3 id="faq-1-"></h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos nam explicabo distinctio totam eligendi ipsam minima incidunt animi ducimus impedit dolor maiores, quibusdam, perspiciatis id voluptatem odio ratione molestiae.</p>
-      </td></tr>
-      <tr><td>
-      	<h3 id="faq-1-"></h3>
-		<p>Quos sed neque pariatur animi impedit temporibus laudantium blanditiis numquam vero at, assumenda repellendus deserunt, ducimus nulla labore sunt ex vel odio. Dicta, neque nobis ipsum aliquid quisquam quam eveniet?</p>
-      </td></tr>
-      <tr><td>
-      	<h3 id="faq-1-"></h3>
-		<p>A molestiae ea ab magnam modi ut, architecto dolorem, accusantium maiores assumenda tempore officiis, illo! Velit saepe dolor consequatur rerum temporibus, voluptate a ullam aut aperiam, excepturi ea, officiis adipisci?</p>
-      </td></tr>
-    </tbody>
-
-  </table -->
+<?php require_once 'includes/body-footer.php';?>
