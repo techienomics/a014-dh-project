@@ -21,7 +21,7 @@
 				<div class="form-group"><label><b>First Name:</b></label>
 					<!--i><ion-icon name="logo-facebook"></ion-icon>  placeholder="Email"  </i-->
 					<input
-						type="text" name="firstName" class="form-control"
+						type="text" name="firstName" class="form-control
 						<?= $FormData->fieldHasError('firstName') ? 'is-invalid' : ''; ?>"
 						value="<?= $FormData->getFirstName() ; ?>"
 					>
