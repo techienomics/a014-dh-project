@@ -1,12 +1,5 @@
 # a014-dh-project 
-Finbile: Learning through data || Full-stack-dev-course's (DigitalHouse)
-
-///////////////////////////////////
-///
-/// IMPORTANT: GENERATE THE FINBILE DATABASE RUNNING finbile_db-scrip.sql FILE
-///
-///////////////////////////////////
-
+Learning through data || Full-stack-dev-course's (DigitalHouse)
 
 A) Website tree
 
